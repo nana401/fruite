@@ -1,0 +1,15 @@
+
+<div class="item item-thumbnail-left" href="#">
+    <img src="{{item.images.list}}">
+    <h2>{{item.name}}</h2>
+    <p class="cartItem">
+    	<div class="num_area">
+	    	<i ng-click="minus(index)" class="numClick minus"></i>
+	    	<i class="num">{{item.num}}</i>
+	    	<i ng-click="plus(index)" class="numClick plus"></i>
+    	</div>
+       
+       <span style="color:rgb(255, 195, 141);font-size: 10px">可用价券{{item.price|price}}</span><br/>
+       <span style="color:rgb(255, 72, 145);">新春打喵价 ￥{{item.vip_price|price}}</span>
+    </p>
+</div>

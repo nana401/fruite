@@ -1,0 +1,40 @@
+<div class="bar bar-header bar-positive">
+  	<h1 class="title">{{name}}<a href="#address">水果APP</a></h1>
+</div>
+<ion-content class="has-footer has-header">
+	<div class="top-tab-bar home-tab-bar">
+		<div class="home-address-city">
+			<span class="home-address-city-icon">
+			</span>
+			<span class="home-address-city-text ng-binding" ng-click="openDistribution()">北京</span>
+			<span class="cirida-select"></span>
+			<div class="home-search disable-user-behavior" ng-click="search()" ana-on-touch="nation?report('search_button','national_homepage'):report('search_button','homepage')">
+				<img src="../img/home-search-3x-black.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="row">
+	  <div class="col">新春特惠</div>
+	  <div class="col">水果</div>
+	  <div class="col">水果</div>
+	  <div class="col">水果</div> 
+	</div>
+	<ion-slide-box class="slide-wrapper" does-continue="true" auto-play="true" slide-interval="2000" show-pager="true"
+>
+	 <ion-slide ng-repeat="item in bannList">
+	   <div class="box"><img src="{{item.path}}" alt=""></div>
+	 </ion-slide>
+	<!--  <ion-slide>
+	 <div class="box"><img src="http://missfresh-asvip-production-common.ufile.ucloud.com.cn/entrance_images/D5B18FA8E8E4D5D589526EB805792DFD.JPG?iopcmd=thumbnail&type=4&width=640" alt=""></div>
+		</ion-slide>
+		<ion-slide>
+	 <div class="box"><img src="http://missfresh-asvip-production-common.ufile.ucloud.com.cn/entrance_images/D5B18FA8E8E4D5D589526EB805792DFD.JPG?iopcmd=thumbnail&type=4&width=640" alt=""></div>
+		</ion-slide> -->
+	</ion-slide-box>
+	
+	<div class="list" id="mylist">
+		<single-cart ng-repeat="item in homedata" item="item"></single-cart>
+	</div>
+
+</ion-content>
+<!-- <div class="goods_num">{{goodsNum}}</div> -->

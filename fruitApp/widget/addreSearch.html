@@ -1,0 +1,32 @@
+<div class="modal" ng-controller="addressCtrl">
+	<div class="bar bar-header bar-positive">
+		 <button ng-click="hide()" class="button  button-clear ion-chevron-left"></button>
+		<h1 class="title">选择收货地址</h1>
+	</div>
+
+	<div class="has-header" style="position: relative;">
+		<div class="top-search search-icon choice-address">
+			<div class="bg-location">
+				<div class="loacition-title ng-binding" ng-click="chooseCity()">北京</div>
+				<span class="cirida-select" style="left:54px;top:25px"></span>
+				<div class="input-box" ng-click="editorRegion()">
+					<span class="search-button search-button-center"></span>
+					<span class="search ge-focus ng-binding" ng-bind="region.building.name || '请输入要收货的小区/写字楼'">请输入要收货的小区/写字楼</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="position-current">
+			<div class="positioning-current faild" ng-class="[geoStatus]">
+				<div class="current" ng-click="selectGeo()">
+					<span ng-class="{'get-building-name': geoStatus == ''}" class="ng-binding">
+                        
+                        获取失败，请手动输入地址
+                    </span>
+					
+				</div>
+				<span class="geo-status" ng-click="getWxLocation()"></span>
+			</div>
+		</div>
+    </div>
+</div>

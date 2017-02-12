@@ -1,0 +1,24 @@
+<div class="modal" ng-controller="modalCtrl">
+	<div class="bar bar-header bar-positive">
+		 <button ng-click="hide()" class="button  button-clear ion-chevron-left"></button>
+		<h1 class="title">{{name}}</h1>
+	</div>
+	<div class="list has-header">
+	  <div class="item item-input-inset">
+	    <label class="item-input-wrapper">
+	      <input ng-model="phone" type="text" placeholder="请输入手机号">
+	    </label>
+	    <button ng-click="sendCode()" class="button button-small">
+	      发送验证码
+	    </button>
+	  </div>
+	  <div class="item item-input-inset">
+	  	 <label class="item-input-wrapper">
+	      <input ng-model="code" type="text" placeholder="请输入验证码">
+	    </label>
+	  </div>
+	  <button ng-click="submit()" class="button button-full button-positive">
+	  登录
+	</button>
+	</div>
+</div>
